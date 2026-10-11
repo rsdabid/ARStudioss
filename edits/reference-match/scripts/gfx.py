@@ -92,7 +92,7 @@ def caption(l1, l2, color, w2max=900, s2max=128):
     C = C * (1 - 0.35 * sh[..., None])
     glowc = np.array(hexrgb(PALETTE[color][2]), np.float32) / 255
     glow = cv2.GaussianBlur(A, (0, 0), 16) * 0.75
-    shadow = np.clip(cv2.GaussianBlur(A, (0, 0), 10) * 1.1, 0, 0.8)
+    shadow = np.clip(np.maximum(cv2.GaussianBlur(A, (0, 0), 12) * 1.4, cv2.GaussianBlur(A, (0, 0), 3) * 1.2), 0, 0.9)
     out = np.zeros((h, w, 4), np.float32)
     # layer: shadow (black) -> glow (colour) -> text
     base_a = shadow + glow * (1 - shadow)

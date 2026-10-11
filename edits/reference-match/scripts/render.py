@@ -215,12 +215,12 @@ def overlays(fr, t, occl):
         u = t - 7.45
         p = e_inout(u / 0.95)
         lx = 1000 + (330 - 1000) * p + 30 * np.sin(u * 2.4) * clamp(u - 0.95)
-        ly = 915 + 40 * np.sin(np.pi * p) * 0.5 + 25 * np.cos(u * 2.0) * clamp(u - 0.95)
+        ly = 1035 + 20 * np.sin(np.pi * p) + 25 * np.cos(u * 2.0) * clamp(u - 0.95)
         r = int(MAG_R - 10)
         y0, y1, x0, x1 = int(ly - r), int(ly + r), int(lx - r), int(lx + r)
         if y0 >= 0 and x0 >= 0 and x1 <= W and y1 <= H:
             patch = fr[y0:y1, x0:x1].copy()
-            big = cv2.resize(patch, None, fx=1.35, fy=1.35, interpolation=cv2.INTER_CUBIC)
+            big = cv2.resize(patch, None, fx=1.12, fy=1.12, interpolation=cv2.INTER_CUBIC)
             o = (big.shape[0] - patch.shape[0]) // 2
             big = big[o:o + patch.shape[0], o:o + patch.shape[1]]
             circ = (np.hypot(*np.mgrid[-r:r, -r:r]) < r).astype(np.float32)[..., None]
@@ -323,7 +323,7 @@ def render_frame(t, raw_bgr, m_small):
         fr = cv2.warpAffine(g, cam_matrix(z), (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT)
     fr = fr * SCREEN_MASK
     occl = None
-    if any(a <= t < b for a, b, *_ in CAPS):
+    if False:  # hand occlusion disabled: captions always stay fully readable
         M = cam_matrix(z)
         occl = hand_occluder(cv2.warpAffine(raw_bgr, M, (W, H), flags=cv2.INTER_LINEAR), cv2.warpAffine(m, M, (W, H)))
     fr = np.clip(fr, 0, 1).astype(np.float32)
