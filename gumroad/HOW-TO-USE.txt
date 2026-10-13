@@ -1,0 +1,60 @@
+REELPILOT — HOW TO USE
+Animation & Subtitle Pack for Claude
+=====================================
+
+Watch the video guide first: [Loom link]
+See what it can do: before-after.mp4 (included in this download)
+
+
+1. INSTALL THE SKILL
+--------------------
+1. Open Claude.
+2. Go to Settings → Capabilities → Skills.
+3. Click "Upload skill" and choose reel-editor-skill.zip.
+4. Make sure the skill is switched on.
+
+
+2. SET UP YOUR PROJECT FOLDER
+-----------------------------
+Create one folder for each video, like this:
+
+  my-reel/
+  ├── raw/          ← your raw talking-head footage
+  ├── reference/    ← a reel whose style you want to copy
+  └── broll/        ← (optional) your own B-roll clips
+
+Tips:
+- Use one reference video. Pick one with the subtitle style and
+  animations you like.
+- B-roll is optional. ReelPilot places the clips you add here.
+  It does not create AI B-roll.
+- If your raw footage has a lot of mistakes or retakes, cut it in
+  CapCut first, then put the trimmed video in raw/.
+
+
+3. EDIT YOUR REEL
+-----------------
+1. Give Claude your project folder.
+2. Ask: "Edit my reel using the ReelPilot skill."
+3. Claude edits your footage to match the reference:
+   animations, animated subtitles and B-roll.
+4. Check the result. If something's off, tell Claude what to
+   change, e.g. "make the subtitles bigger" or "cut the pause
+   at 0:12", and it will re-edit.
+5. Download the finished video and post it.
+
+
+4. TIPS FOR BEST RESULTS
+------------------------
+- Clear audio gives better subtitles.
+- Cutting can take a few tries to get right. Pre-cutting in
+  CapCut is the fastest route.
+- The closer your footage is to the reference (framing, length),
+  the closer the edit will look.
+
+
+5. NEED HELP?
+-------------
+Reply to your Gumroad receipt email and I'll help you out.
+
+Note: all sales are final. No refunds on digital products.
