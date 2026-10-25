@@ -1,0 +1,118 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@page{size:A4;margin:0}
+*{margin:0;box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif;color:#14211b;font-size:11.5pt;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pg{width:210mm;min-height:297mm;padding:18mm 18mm 16mm;page-break-after:always;position:relative}
+.pg:last-child{page-break-after:auto}
+.cover{background:linear-gradient(160deg,#0f3a28,#06150e);color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.cover .k{font-size:10pt;letter-spacing:4px;color:#5EE7B0;font-weight:700}
+.cover h1{font-size:60pt;font-weight:800;letter-spacing:-2px;line-height:1;margin:10px 0 14px}.cover h1 span{color:#5EE7B0}
+.cover p{font-size:15pt;color:#bfe9d4;max-width:130mm}
+.cover .v{position:absolute;top:18mm;right:18mm;padding:6px 14px;border:1px solid #5EE7B0;border-radius:100px;color:#5EE7B0;font-weight:700;font-size:10pt}
+h2{font-size:22pt;letter-spacing:-.5px;margin-bottom:4mm;font-weight:800}
+h2 .n{display:inline-flex;width:34px;height:34px;border-radius:10px;background:#5EE7B0;color:#06150e;align-items:center;justify-content:center;font-size:15pt;margin-right:10px;vertical-align:3px}
+h3{font-size:13pt;margin:6mm 0 2mm}
+p{margin-bottom:3mm}
+ul,ol{margin:0 0 3mm 6mm}li{margin-bottom:1.5mm}
+.box{border-radius:12px;padding:4mm 5mm;margin:4mm 0;background:#eefaf4;border:1px solid #c9eedb}
+.warn{background:#fff6e8;border-color:#f3dcb1}
+code,pre{font-family:"DejaVu Sans Mono",monospace;font-size:9.5pt}
+pre{background:#0d1f18;color:#d8f7e8;border-radius:10px;padding:4mm 5mm;margin:3mm 0;white-space:pre-wrap}
+code{background:#e7efeb;padding:1px 5px;border-radius:4px}
+table{width:100%;border-collapse:collapse;margin:3mm 0;font-size:10.5pt}td,th{border-bottom:1px solid #dfe8e3;padding:2.4mm 2mm;text-align:left;vertical-align:top}th{font-size:9pt;letter-spacing:1px;text-transform:uppercase;color:#4c6b5c}
+.say{background:#fff;border:2px dashed #5EE7B0;border-radius:10px;padding:3mm 5mm;margin:2mm 0;font-weight:600}
+.foot{position:absolute;bottom:9mm;left:18mm;right:18mm;font-size:8.5pt;color:#7f9a8c;display:flex;justify-content:space-between}
+</style></head><body>
+
+<div class="pg cover"><div class="v">VERSION 2</div><div class="k">CLAUDE SKILL · USER GUIDE</div><h1>Reel<span>Pilot</span></h1>
+<p>Turn raw talking-head footage into a ready-to-post reel with animations, animated subtitles and B-roll, styled like a reel you love.</p>
+<p style="margin-top:10mm;font-size:11pt;color:#8fc7ab">📹 Video walkthrough: [Loom link]</p></div>
+
+<div class="pg"><h2>What's inside</h2>
+<table><tr><th>File</th><th>What it is</th></tr>
+<tr><td><b>reelpilot-skill-v2.zip</b></td><td>The skill itself. You install this into Claude (page 3).</td></tr>
+<tr><td><b>ReelPilot-Guide.pdf</b></td><td>This guide.</td></tr>
+<tr><td><b>example-edit.mp4</b></td><td>A real reel edited with ReelPilot, so you can see what it does.</td></tr></table>
+
+<h3>What ReelPilot does</h3>
+<ul><li><b>Copies a style.</b> You give it one reel you like. It studies the captions, zooms, graphics, colours and sound effects, then edits your video the same way.</li>
+<li><b>Animated subtitles.</b> Bold two-line keyword captions that pop in, coloured like the reference.</li>
+<li><b>Animations.</b> Motion graphics such as cards, rating pills, question marks, progress bars and chat bubbles, timed to what you say.</li>
+<li><b>Zoom "cuts".</b> Punch-ins and smooth pushes that keep a single take feeling fast.</li>
+<li><b>Your B-roll.</b> Put clips in a folder and it places them where they fit. (It doesn't generate AI B-roll.)</li>
+<li><b>Colour grade and sound effects.</b> Whooshes, pops and hits on every graphic, plus clean, loud voice audio.</li></ul>
+
+<h3>What you need</h3>
+<ul><li>A Mac or Windows computer.</li>
+<li><b>Claude Code</b> (recommended), because ReelPilot renders the video on your own computer. Get it at <b>claude.com/claude-code</b>.</li>
+<li>A raw talking-head video, filmed vertically if possible.</li>
+<li>One reference reel whose style you want.</li></ul>
+<div class="box">💡 You don't need any editing or coding skills. Claude installs the tools, runs everything and asks you before it renders.</div>
+<div class="foot"><span>ReelPilot v2</span><span>2</span></div></div>
+
+<div class="pg"><h2><span class="n">1</span>Install the skill</h2>
+<h3>Option A: Claude Code (recommended)</h3>
+<ol><li>Unzip <b>reelpilot-skill-v2.zip</b>. You'll get a folder called <code>reelpilot</code>.</li>
+<li>Move that folder into your Claude skills folder:
+<pre>Mac:      ~/.claude/skills/reelpilot
+Windows:  C:\Users\&lt;you&gt;\.claude\skills\reelpilot</pre>
+On a Mac, press <b>Cmd + Shift + G</b> in Finder and paste <code>~/.claude/skills</code> to open it. Create the <code>skills</code> folder if it doesn't exist.</li>
+<li>Start Claude Code. Ask it <span class="say" style="display:inline-block">What skills do you have?</span> and check that <b>reelpilot</b> is listed.</li></ol>
+
+<h3>Option B: the Claude app</h3>
+<ol><li>Open Claude → <b>Settings → Capabilities → Skills</b>.</li>
+<li>Click <b>Upload skill</b> and choose <b>reelpilot-skill-v2.zip</b> (the zip itself, don't unzip it).</li>
+<li>Make sure code execution is turned on.</li></ol>
+<div class="box warn">⚠️ In the Claude app the video is processed in Claude's sandbox, so uploads are limited in size and rendering can be slower. For full-length reels, use Claude Code.</div>
+
+<h3>Upgrading from version 1?</h3>
+<p>Delete the old skill first (remove the old folder, or delete it under Settings → Skills), then install v2. This stops the two versions from clashing.</p>
+<div class="foot"><span>ReelPilot v2</span><span>3</span></div></div>
+
+<div class="pg"><h2><span class="n">2</span>Set up your project folder</h2>
+<p>Make one folder per reel, with these three folders inside:</p>
+<pre>my-reel/
+├── raw/          ← your raw talking-head video
+├── reference/    ← ONE reel whose style you want
+└── broll/        ← (optional) your own B-roll clips</pre>
+<table><tr><th>Folder</th><th>Tips</th></tr>
+<tr><td><b>raw/</b></td><td>Use one take. Clear audio gives the best subtitles. If you stumbled a lot, cut the mistakes in <b>CapCut</b> first and put the trimmed video here.</td></tr>
+<tr><td><b>reference/</b></td><td>Use only one reel. Pick one with the captions, animations and energy you want. A similar framing (head and shoulders) gives the closest match.</td></tr>
+<tr><td><b>broll/</b></td><td>Optional. Screen recordings, product shots, phone clips. Name them clearly (e.g. <code>dashboard.mp4</code>, <code>coffee-shop.mov</code>) so Claude knows what each one shows.</td></tr></table>
+<div class="box">💡 To save a reel you like as a reference, download it from Instagram or TikTok with a saver app or a screen recording, then drop it in <b>reference/</b>.</div>
+<div class="foot"><span>ReelPilot v2</span><span>4</span></div></div>
+
+<div class="pg"><h2><span class="n">3</span>Edit your reel</h2>
+<ol><li>Open Claude Code <b>inside your project folder</b> (in Terminal: <code>cd</code> to the folder, then type <code>claude</code>).</li>
+<li>Type:<div class="say">Edit my reel with ReelPilot. Raw footage is in raw/, the style reference is in reference/ and my B-roll is in broll/.</div></li>
+<li><b>First run only:</b> Claude installs ffmpeg and a few Python tools. Say yes when it asks. This takes a few minutes, once.</li>
+<li>Claude transcribes your video, studies the reference and shows you a <b>plan</b>: a table of what happens at each moment. Read it and reply <b>"looks good"</b> or ask for changes.</li>
+<li>Claude renders a <b>preview sheet</b> of still frames, checks it, then renders the full video. A 30-second reel usually takes a few minutes; longer videos take longer.</li>
+<li>Your finished reel is saved as <b>final_edit.mp4</b> in the project folder, with <b>EDIT_NOTES.md</b> explaining what was done.</li></ol>
+
+<h3>Ask for changes in plain words</h3>
+<div class="say">Make the subtitles bigger.</div>
+<div class="say">Cut the pause at 0:12.</div>
+<div class="say">Put dashboard.mp4 when I say "my results".</div>
+<div class="say">Less zoom, it feels too fast.</div>
+<p>Claude only re-renders the part that changed.</p>
+<div class="foot"><span>ReelPilot v2</span><span>5</span></div></div>
+
+<div class="pg"><h2>Tips &amp; troubleshooting</h2>
+<table><tr><th>Problem</th><th>What to do</th></tr>
+<tr><td>Subtitles have wrong words</td><td>Tell Claude the correct spelling (names and brands especially). It fixes the captions and re-renders.</td></tr>
+<tr><td>Cuts feel off</td><td>Cutting can take a couple of tries. For messy takes, cut in CapCut first, then run ReelPilot on the trimmed video.</td></tr>
+<tr><td>"ffmpeg not found"</td><td>Ask Claude to install it. On a Mac it uses <code>brew install ffmpeg</code>.</td></tr>
+<tr><td>A download failed during setup</td><td>Check your internet connection and ask Claude to try again. It tells you exactly which step failed.</td></tr>
+<tr><td>Edit doesn't look like the reference</td><td>Use a reference with similar framing, and tell Claude what's missing, e.g. "the captions in the reference are lower".</td></tr>
+<tr><td>Numbers missing from graphics</td><td>That's on purpose. ReelPilot never invents views, prices or stats. Tell Claude the real numbers if you want them shown.</td></tr></table>
+
+<h3>Good to know</h3>
+<ul><li>ReelPilot works on talking-head videos on any topic.</li>
+<li>It uses your B-roll. It doesn't generate AI footage or download music. If you want music, add your own track and ask Claude to mix it in.</li>
+<li>Your footage stays on your computer when you use Claude Code.</li></ul>
+
+<h3>Need help?</h3>
+<p>Reply to your Gumroad receipt email. All sales are final (digital product, no refunds).</p>
+<div class="foot"><span>ReelPilot v2</span><span>6</span></div></div>
+</body></html>

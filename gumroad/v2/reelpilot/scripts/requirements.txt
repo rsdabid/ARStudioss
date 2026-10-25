@@ -1,0 +1,9 @@
+numpy
+opencv-python
+pillow
+scipy
+faster-whisper
+ai-edge-litert
+# only for transcribe_onnx.py:
+# onnxruntime
+# transformers
