@@ -1,13 +1,13 @@
 # Governing AI in HR — Script v2 (Story-Driven, Motion Graphics)
 
 **Source:** https://youtu.be/ds_blTN5YAU (transcript 0:00–6:27)
-**Target length:** ~4:45 (~700 words of VO at ~150 wpm)
+**Target length:** ~5:00 (~750 words of VO at ~150 wpm)
 **Voice:** Calm, authoritative, British English. Short lines, with room to breathe between them (good for TTS too).
 
 ### What's different from v1
 - **One story runs through the whole video.** A fictional company switches on an AI screening tool, and six months later a rejected candidate asks *why*. Nobody can answer. Each rule rewinds to show where that company went wrong, and the ending replays the story with the rules in place.
 - **Problem first, then the fix**, in every section. That gives viewers a reason to keep watching each point.
-- **Shorter:** ~4:45 vs ~6:30+. Nothing from the original's substance is lost.
+- **Shorter:** ~5:00 vs ~6:30+. Nothing from the original's substance is lost.
 - **Recurring visual cast:** "The Company" (a simple building icon), "The Tool" (a small friendly AI chip character) and "The Candidate". The motion designer animates the same characters throughout instead of inventing new visuals for every line.
 
 ---
